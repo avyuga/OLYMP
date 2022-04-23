@@ -4,6 +4,7 @@ import cv2
 import open3d as o3d
 import pyzed.sl as sl
 
+'''initiating camera'''
 # zed = sl.Camera()
 # init_params = sl.InitParameters()
 # init_params.camera_resolution = sl.RESOLUTION.HD1080  # Use HD1080 video mode
@@ -19,15 +20,16 @@ import pyzed.sl as sl
 #     exit(1)
 
 
-# Getting point cloud
+''' Getting point cloud'''
 # get_point_cloud(zed)
 # cloud = o3d.io.read_point_cloud("files/test.ply")
 # o3d.visualization.draw_geometries([cloud])
 
-# process(r'C:\Users\Anastasia\PycharmProjects\OLIMP\files\test.ply')
+# process(r'C:\Users\Anastasia\PycharmProjects\OLYMP\files\test.ply')
 process(r'C:\Users\Anastasia\PycharmProjects\nti_irs_2021\zed_camera\cloud2.ply')
+
 # img = get_image(zed)
 # cyber_vision(img)
 
-# Close the camera
+'''Close the camera'''
 # zed.close()
