@@ -1,0 +1,10 @@
+Ссылки на датасеты облаков точек
+
+http://redwood-data.org/
+http://rgbd.cs.princeton.edu/
+https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html
+https://vision.in.tum.de/data/datasets/rgbd-dataset
+
+voxel_size зависит от количества точек, нужно подбирать индивидуально. Может быть >1
+
+? Почему-то после draw_geometries теряется тип PointCloud объекта
