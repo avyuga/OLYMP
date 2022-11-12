@@ -9,6 +9,7 @@ def define_color(color):
         return "BLUE"
     return "NONE"
 
+
 def mask(img):
     """
     Определяем фон (как самую серую часть), с помощью маски удаляем её

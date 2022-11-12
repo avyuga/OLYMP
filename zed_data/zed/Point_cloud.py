@@ -36,6 +36,9 @@ def process(cloud_path):
     # <class 'open3d.cpu.pybind.geometry.PointCloud'> != <open3d.geometry.PointCloud>
     cloud = o3d.geometry.PointCloud(cloud)
 
+    o3d.visualization.draw_geometries([cloud], width=720, height=540)
+    cloud = o3d.geometry.PointCloud(cloud)
+
     # voxel_down_sample
     cloud = o3d.geometry.PointCloud(cloud.voxel_down_sample(voxel_size=0.005))
 
@@ -72,3 +75,9 @@ def process(cloud_path):
     for i in range(1, max_label+1):
         clouds += [cloud_clean.select_by_index(np.where(labels == i)[0])]
     o3d.visualization.draw_geometries([clouds[0]], width=720, height=540)
+
+    cup = o3d.geometry.PointCloud(clouds[0])
+    alpha = 0.03
+    mesh = o3d.geometry.TriangleMesh.create_from_point_cloud_alpha_shape(cup, alpha)
+    mesh.compute_vertex_normals()
+    o3d.visualization.draw_geometries([mesh], mesh_show_back_face=True, width=720, height=540)
