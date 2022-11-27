@@ -8,7 +8,7 @@ img2 = cv.imread(r'images\pattern.jpg',cv.IMREAD_GRAYSCALE) # trainImage
 
 
 #  ---------- brute-force matching with ORB descriptors  ----------
-#
+
 # # Initiate ORB detector
 # orb = cv.ORB_create()
 # # find the keypoints and descriptors with ORB
